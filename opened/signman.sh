@@ -1,3 +1,4 @@
+./unmount.sh
 echo You can edit your manifest signing key by simply swapping out the .key file on line 14 for a different one. Starting in 5 seconds...
 sleep 5
 curl -o ota_prod.key http://api.froggitti.net/ota_prod.key
