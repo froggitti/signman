@@ -1,4 +1,10 @@
 # signman
 signman is a simple toolset i put together that can unpack, mount, and sign Anki Vector OTA files using custom/proprietary manifest signing keys
 
-in the root of the repo, you will see `unpackota.sh`. all you need to do is put an ota in the same directory as that shell file named `latest.ota` and run the shell script. it will unpack the OTA in a directory called `opened`. in that directory, you will find many more scripts and utilities
+# what do all of these scripts do?
+~/unpackota.sh - unpacks an OTA file (needs to be named latest.ota)
+
+opened/decrypt.sh - decrypts the apq8009-robot-boot.img.gz and apq8009-robot-sysfs.img.gz in the OTA you unpacked
+opened/mount.sh - mounts the apq8009-robot-sysfs.img.gz in the OTA you unpacked
+opened/unmount.sh - unmounts the apq8009-robot-sysfs.img.gz in the OTA you unpacked
+opened/signman.sh - unmounts the mounted image (if any), and repacks the apq8009-robot-boot.img and apq8009-robot.sysfs.img into an OTA file with a signed manifest
