@@ -1,5 +1,5 @@
 # signman
-signman is a simple toolset i put together that can unpack, mount, and sign Anki Vector OTA files using custom/proprietary manifest signing keys
+signman is a simple toolset i put together that can unpack, mount, and sign Anki Vector OTA files using custom or proprietary manifest signing keys
 
 # what do all of these scripts do?
 ~/unpackota.sh - unpacks an OTA file (needs to be named latest.ota)
