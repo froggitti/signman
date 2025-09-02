@@ -11,7 +11,7 @@ else
   if [ -e "opened/manifest.*" ]; then
     rm opened/manifest.*
   fi
-  mv manifest.* opened
-  mv apq8009-* opened
+  sudo mv manifest.* opened
+  sudo mv apq8009-* opened
   echo done
 fi
