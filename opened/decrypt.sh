@@ -14,7 +14,7 @@ else
   if [ -f apq8009-robot-boot.img.gz ]; then
     sudo rm apq8009-robot-boot.img.gz
   fi
-  if [ -f rm apq8009-robot-sysfs.img.gz ]; then
+  if [ -f apq8009-robot-sysfs.img.gz ]; then
     sudo rm apq8009-robot-sysfs.img.gz
   fi
   fi
