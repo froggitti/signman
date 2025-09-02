@@ -6,7 +6,10 @@ else
   echo opening ota
   tar -xf $1
   if [ -f "opened/apq8009*" ]; then
-    rm opened/apq8009-* opened/manifest.*
+    rm opened/apq8009-*
+  fi
+  if [ -f "opened/manifest.*" ]; then
+    rm opened/manifest.*
   fi
   mv manifest.* opened
   mv apq8009-* opened
