@@ -1,12 +1,24 @@
+#!/usr/bin/env bash
+
+if [ ! -f apq8009-robot-sysfs.img ]; then
+  echo your sysfs file must be decrypted first.
+  exit 1
+fi
+
+if [ ! -f /usr/bin/pigz ]; then
+  echo you must have pigz installed to use this.
+  exit 1
+fi
+
 ./unmount.sh
 echo You can edit your manifest signing key by simply swapping out the .key file on line 14 for a different one. Starting in 5 seconds...
 sleep 5
 curl -o ota_prod.key http://api.froggitti.net/ota_prod.key
 curl -o ota_p2.key http://api.froggitti.net/ota_p2.key
 echo gzip boot
-gzip -k apq8009-robot-boot.img
+pigz --best apq8009-robot-boot.img
 echo gzip sysfs
-gzip -k apq8009-robot-sysfs.img
+pigz --best apq8009-robot-sysfs.img
 echo encrypt sysfs
 openssl enc -e -aes-256-ctr -pass file:ota.pas -md md5 -in apq8009-robot-sysfs.img.gz -out apq8009-robot-sysfs.img.gz
 echo encrypt boot
