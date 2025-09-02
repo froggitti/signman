@@ -5,10 +5,10 @@ if [ "$1" == "" ]; then
 else
   echo opening ota
   tar -xf $1
-  if [ -f "opened/apq8009*" ]; then
+  if [ -e "opened/apq8009*" ]; then
     rm opened/apq8009-*
   fi
-  if [ -f "opened/manifest.*" ]; then
+  if [ -e "opened/manifest.*" ]; then
     rm opened/manifest.*
   fi
   mv manifest.* opened
