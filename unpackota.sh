@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$1" == "" ]; then
-  echo no ota provided.
+  echo usage: ./unpackota.sh <.ota file>
 else
   echo opening ota
   tar -xf $1
