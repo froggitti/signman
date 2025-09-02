@@ -17,6 +17,7 @@ else
   if [ -f rm apq8009-robot-sysfs.img.gz ]; then
     sudo rm apq8009-robot-sysfs.img.gz
   fi
+  fi
   gunzip apq8009-*
   sudo mv apq8009-robot-sysfs.img.dec apq8009-robot-sysfs.img
   sudo mv apq8009-robot-boot.img.dec apq8009-robot-boot.img
