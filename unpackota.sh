@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$1" == "" ] then
+if [ "$1" == "" ]; then
   echo no ota provided.
 else
   echo opening ota
