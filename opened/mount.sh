@@ -9,6 +9,7 @@ if [ -f apq8009-robot-sysfs.img ]; then
   if [ ! -d mounted/anki ]; then
     echo this is not a vector ota sysfs file.
     sudo umount mounted
+    rm -rf mounted
     exit 1
   fi
 else
